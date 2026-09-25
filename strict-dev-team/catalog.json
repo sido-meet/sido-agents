@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "agents": [
+    {"name": "developer", "scenario": "engineering", "description": "实现生产代码与修复实现缺陷；不修改测试代码。", "prompt": "agents/engineering/developer.md", "access": "write"},
+    {"name": "tester", "scenario": "engineering", "description": "设计和执行有效测试，分析失败；生产缺陷交给 developer。", "prompt": "agents/engineering/tester.md", "access": "write"},
+    {"name": "reviewer", "scenario": "engineering", "description": "只读审查代码、测试与需求，提供有证据的问题和版本一致的结论。", "prompt": "agents/engineering/reviewer.md", "access": "read"}
+  ]
+}

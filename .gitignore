@@ -1,0 +1,4 @@
+dist/
+legacy-dist/
+__pycache__/
+*.pyc
