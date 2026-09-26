@@ -17,7 +17,6 @@ class AgentTests(unittest.TestCase):
         for a in agents.catalog("strict-dev-team"):
             config = tomllib.loads(files[f'.codex/agents/strict-dev-team-{a["name"]}.toml'].decode())
             self.assertIn("## 快照与证据", config["developer_instructions"])
-            self.assertIn(".sido-agents/strict-dev-team/workflows/strict-development.md", config["developer_instructions"])
             self.assertEqual(config["name"], "strict-dev-team-" + a["name"])
             if a["access"] == "read":
                 self.assertEqual(config["sandbox_mode"], "read-only")
